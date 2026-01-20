@@ -1,0 +1,13 @@
+module decoder_tb( );
+reg a,b;
+wire y1,y2,y3,y4;
+decoder uut(a,b,y1,y2,y3,y4);
+initial
+begin
+#10 a=0;b=0;
+#10 a=0;b=1;
+#10 a=1;b=0;
+#10 a=1;b=1;
+#10 $finish;
+end
+endmodule
